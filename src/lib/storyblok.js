@@ -5,15 +5,15 @@ import Teaser from '@/components/Teaser';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
-	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN || '8xUFsyBYpXTbZLqFBrL1Dgtt',
-version: 'published', // Force published mode on the live site
-	use: [apiPlugin],
-	components: {
-		page: Page,
-		feature: Feature,
-		grid: Grid,
-		teaser: Teaser,
-	},
+  accessToken: '8xUFsyBYpXTbZLqFBrL1Dgtt', // Your Public token
+  version: 'published', // Force published version
+  use: [apiPlugin],
+  components: {
+    page: Page,
+    feature: Feature,
+    grid: Grid,
+    teaser: Teaser,
+  },
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
 		region: process.env.STORYBLOK_REGION || 'eu',
