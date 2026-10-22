@@ -13,3 +13,9 @@ This project was built as a hands-on learning experience to master the workflow 
 - Next.js (React)
 - Storyblok (Headless CMS)
 - Custom CSS
+
+## Migration Case Study
+I performed a practice migration of my old static HTML portfolio into Storyblok. 
+- Created a content inventory and redirect map (see `MIGRATION.md`).
+- Manually migrated text content from the old site into the new CMS blocks.
+- Executed a post-migration QA check on all live URLs and responsive layouts.
