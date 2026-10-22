@@ -6,7 +6,7 @@ import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
 	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
-	version: 'draft',
+	version: process.env.NODE_ENV === 'development' ? 'draft' : 'published',
 	use: [apiPlugin],
 	components: {
 		page: Page,
