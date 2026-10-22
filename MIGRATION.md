@@ -6,7 +6,7 @@
 | / | Home | Page | Keep | / | Used as the main hero section. |
 | /projects.html | Projects | Page | Keep | /projects | Migrated project links to Feature blocks. |
 | /about.html | About | Page | Merge | /about | Merged with contact info and profile picture. |
-| /contact.html | Contact | Page | Retire | /contact | Old contact page retired, replaced with CMS contact cards. |
+| /contact.html | Contact | Page | keep | /contact | Old contact page retired, replaced with CMS contact cards. |
 
 ## 2. Redirect Map
 | Old URL | New URL | Redirect Type | Tested (yes/no) |
