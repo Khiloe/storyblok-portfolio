@@ -1,1 +1,161 @@
-@import 'https://a.storyblok.com/f/212319/x/e6ccda03b8/blueprint-blank.css';
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* --- THE MAGIC FIX FOR THE TEASER BOX --- */
+.teaser {
+  position: relative;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 350px;
+  padding: 0; /* Ensures no inner space */
+}
+
+/* Force the image to be a background cover */
+.teaser img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 0.4;
+  z-index: 1;
+  max-width: none !important;
+  max-height: none !important;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Put the text on top of the image */
+.teaser h1 {
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  margin: 0; /* Removes default spacing */
+}
+
+/* Grid and Features */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.feature {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- DARK MODE --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .feature {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 4px 6px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .feature h2 {
+  color: #ffffff;
+}
+
+body.dark-mode .feature p {
+  color: #aaaaaa;
+}
+
+body.dark-mode header {
+  background-color: #000000;
+}
+
+/* Fix the About page profile picture */
+.teaser img.profile-image {
+  position: relative !important;
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 4px solid white !important;
+  margin: 20px auto 0 auto !important;
+  z-index: 10 !important;
+  opacity: 1 !important; /* Removes the purple tint from your face */
+}
+
+/* BACKGROUND IMAGE (Home, Projects, Contact) */
+.teaser img.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 0.4;
+  z-index: 1;
+  max-width: none !important;
+  max-height: none !important;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* CIRCLE IMAGE (About page) */
+.teaser img.profile-image {
+  position: relative !important;
+  width: 250px !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  border: 4px solid white !important;
+  margin: 20px auto 0 auto !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  max-width: 200px !important;
+}
+
+/* Make the About page text centered */
+.teaser h1 {
+  text-align: center;
+  width: 100%;
+}
+
+/* If it's the circle layout, stack them nicely */
+.teaser:has(.profile-image) {
+  flex-direction: column;
+  gap: 20px;
+}
