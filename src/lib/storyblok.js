@@ -5,8 +5,8 @@ import Teaser from '@/components/Teaser';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 export const getStoryblokApi = storyblokInit({
-  accessToken: '8xUFsyBYpXTbZLqFBrL1Dgtt', // Your Public token
-  version: 'published', // Force published version
+  accessToken: '8xUFsyBYpXTbZLqFBrL1Dgtt',
+  version: 'published',
   use: [apiPlugin],
   components: {
     page: Page,
@@ -14,12 +14,7 @@ export const getStoryblokApi = storyblokInit({
     grid: Grid,
     teaser: Teaser,
   },
-	apiOptions: {
-		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */
-		region: process.env.STORYBLOK_REGION || 'eu',
-		/** The following code is only required when creating a Storyblok space directly via the Blueprints feature. */
-		endpoint: process.env.STORYBLOK_API_BASE_URL
-			? `${new URL(process.env.STORYBLOK_API_BASE_URL).origin}/v2`
-			: undefined,
-	},
+  apiOptions: {
+    region: process.env.STORYBLOK_REGION || 'eu',
+  },
 });
