@@ -10,13 +10,13 @@
 	},
 	"dependencies": {
 		"@storyblok/react": "^7.3.1",
-		"next": "^16.3.5",
-		"react": "^19.3.0",
-		"react-dom": "^19.3.0"
+		"next": "^16.4.2",
+		"react": "^19.3.1",
+		"react-dom": "^19.3.1"
 	},
 	"devDependencies": {
 		"@netlify/plugin-nextjs": "^5.15.13",
 		"eslint": "^9.39.5",
-		"eslint-config-next": "^16.3.5"
+		"eslint-config-next": "^16.4.2"
 	}
 }
